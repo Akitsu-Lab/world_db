@@ -2,11 +2,14 @@
 
 ## 手順
 
-### dockerfile から image を作成(ビルド)
+### リポジトリに移動する
 
 ```shell
 cd (path to this repository)
 ```
+
+### dockerfile から image を作成(ビルド)
+
 
 ```shell
 docker build -t world_db_mysql_8.0 .
