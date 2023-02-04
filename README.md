@@ -5,6 +5,10 @@
 ### dockerfile から image を作成(ビルド)
 
 ```shell
+cd (path to this repository)
+```
+
+```shell
 docker build -t world_db_mysql_8.0 .
 ```
 
