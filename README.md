@@ -62,3 +62,9 @@ docker ps
 ```shell
 docker stop world_db
 ```
+
+## 不要な docker image を削除
+
+```shell
+docker rmi $(docker images -f "dangling=true" -q)
+```
