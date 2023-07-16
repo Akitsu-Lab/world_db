@@ -18,10 +18,15 @@ docker build -t world_db_mysql_8.0 .
 ### image を起動
 
 ```shell
-docker run --name world_db --rm -d -p 3306:3306 world_db_mysql_8.0
+docker run --name world_db --rm -d -p 13306:3306 world_db_mysql_8.0
 ```
 
 docker run --name <コンテナ名> --rm -d -p <ホスト側ポート>:<コンテナ側ポート> <イメージ名>
+
+  - コンテナに入らなくてもログインできる
+  ```sh
+  mysql -u root -p --port=13306 --protocol=TCP
+  ```
 
 ### コンテナに入る
 
