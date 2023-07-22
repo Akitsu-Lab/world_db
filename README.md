@@ -17,8 +17,13 @@ docker build -t world_db_mysql_8.0 .
 
 ### image を起動
 
+```sh
+# ネットワークを作成
+docker network create my_network
+```
+
 ```shell
-docker run --name world_db --rm -d -p 13306:3306 world_db_mysql_8.0
+docker run --name world_db --rm -d -p 13306:3306 --network my_network world_db_mysql_8.0
 ```
 
 docker run --name <コンテナ名> --rm -d -p <ホスト側ポート>:<コンテナ側ポート> <イメージ名>
